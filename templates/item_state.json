@@ -1,0 +1,17 @@
+{
+	"model": {
+		"type": "composite",
+		"models": [
+			{
+				"type": "model",
+				"model": "item/${tool_item}"
+			},
+			{
+				"type": "select",
+				"property": "trim_material",
+				"cases": [
+				]
+			}
+		]
+	}
+}

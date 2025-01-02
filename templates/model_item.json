@@ -1,0 +1,7 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "item/${tool_item}",
+		"layer1": "trims/items/${tool_type}/${pattern}_${color}"
+	}
+}

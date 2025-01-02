@@ -1,0 +1,15 @@
+amethyst
+copper
+diamond
+diamond_darker
+emerald
+gold
+gold_darker
+iron
+iron_darker
+lapis
+netherite
+netherite_darker
+quartz
+redstone
+resin

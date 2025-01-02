@@ -1,0 +1,11 @@
+amethyst  amethyst_shard
+copper    copper_ingot
+diamond   diamond
+emerald   emerald
+gold      gold_ingot
+iron      iron_ingot
+lapis     lapis_lazuli
+netherite netherite_ingot
+quartz    quartz
+redstone  redstone
+resin     resin_brick

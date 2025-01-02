@@ -1,0 +1,13 @@
+{
+	"pack": {
+		"pack_format": 61,
+		"supported_formats": [61, 61],
+		"description": [
+			{ "color":"gray", "text":""},
+			{ "color":"aqua", "text":"v1.0.0" }, { "color":"white", "text":" | "},
+			{ "color":"yellow", "text":"MC 1.21.4" }, { "color":"white", "text":" | "},
+			"by ", { "color":"gold", "text":"Estecka\n" },
+			"Vanilla trimmable tools\n"
+		]
+	}
+}
