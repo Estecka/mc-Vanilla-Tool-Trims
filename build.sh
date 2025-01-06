@@ -10,7 +10,7 @@ sh/make-item-models.sh
 sh/make-variants-cit.sh
 
 echo >&2 -e "\n\t# Data generation"
-sh/make-recipes.sh
+sh/make-tag.sh
 
 echo >&2 -e "\n\t# Minifying"
 sh/minify.sh >/dev/null
