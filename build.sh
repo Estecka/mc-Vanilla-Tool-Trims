@@ -6,8 +6,7 @@ sh/make-textures.sh
 
 echo >&2 -e "\n\t# Assets generation"
 sh/make-atlas.sh
-sh/make-trim-models.sh
-sh/make-item-states.sh
+sh/make-item-models.sh
 sh/make-variants-cit.sh
 
 echo >&2 -e "\n\t# Data generation"

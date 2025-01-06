@@ -12,4 +12,3 @@ netherite        trims/color_palettes/netherite
 netherite_darker trims/color_palettes/netherite_darker
 quartz           trims/color_palettes/quartz
 redstone         trims/color_palettes/redstone
-resin            trims/color_palettes/resin

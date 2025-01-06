@@ -7,7 +7,7 @@
 		"count": 1,
 		"id": "${tool_item}",
 		"components": {
-			"item_model": "trimmed_${tool_item}/${pattern}",
+			"item_model": "trimmed_${tool_item}/${pattern}_${material}",
 			"trim": { "pattern": "${pattern}", "material": "${material}" }
 		}
 	}
