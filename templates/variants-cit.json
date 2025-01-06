@@ -1,0 +1,6 @@
+{
+	"type": "trim_pattern",
+	"items": ["${tool_item}"],
+	"itemsFromModels": false,
+	"modelPrefix": "trimmed_${tool_item}/"
+}

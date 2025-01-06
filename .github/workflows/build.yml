@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Make executable
-        run: chmod +x ./*.sh
+        run: chmod +x ./*.sh sh/*.sh
       - name: Build
         run: ./build.sh
       - name: Upload artifacts

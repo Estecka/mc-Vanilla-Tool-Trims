@@ -1,5 +1,3 @@
-# Args: $(item) $(material)
-
 give @s shaper_armor_trim_smithing_template
 give @s silence_armor_trim_smithing_template
 give @s snout_armor_trim_smithing_template

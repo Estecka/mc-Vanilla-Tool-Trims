@@ -2,13 +2,19 @@
 set -eu -o pipefail
 
 echo >&2 -e "\n\t# Texture generation"
-./texturegen.sh
+sh/make-textures.sh
+
+echo >&2 -e "\n\t# Assets generation"
+sh/make-atlas.sh
+sh/make-trim-models.sh
+sh/make-item-states.sh
+sh/make-variants-cit.sh
 
 echo >&2 -e "\n\t# Data generation"
-./datagen.sh
+sh/make-recipes.sh
 
 echo >&2 -e "\n\t# Minifying"
-./minify.sh
+sh/minify.sh >/dev/null
 
 echo >&2 -e "\n\t# Packing"
-./pack.sh
+sh/pack.sh

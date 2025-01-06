@@ -1,6 +1,11 @@
 # Generated Files
-pack.mcmeta
+/pack.mcmeta
+/pack-all.mcmeta
+/pack-assets.mcmeta
+/pack-data.mcmeta
+
 assets/*/textures/trims/items/*
 assets/**/*.json
 data/**/*.json
+
 *.zip
