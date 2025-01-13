@@ -4,7 +4,7 @@ IFS=''
 source sh/makeutil.sh
 
 
-cat ingredients/tools.txt | while IFS=$'\t\n\r\v\f ' read -r tool_item tier tool_type;
+cat ingredients/tools.txt | while readwords tool_item tier tool_type model overrides;
 do
 	export tool_item;
 

@@ -1,0 +1,16 @@
+{
+	"type": "composite",
+	"models": [
+		{
+			"type": "model",
+			"model": "item/${base_model}"
+		},
+		{
+			"type": "select",
+			"property": "trim_material",
+			"cases": [
+			]
+		}
+	]
+}
+

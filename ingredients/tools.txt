@@ -1,30 +1,34 @@
-netherite_sword   netherite sword
-netherite_pickaxe netherite pickaxe
-netherite_axe     netherite axe
-netherite_shovel  netherite shovel
-netherite_hoe     netherite hoe
-diamond_sword     diamond   sword
-diamond_pickaxe   diamond   pickaxe
-diamond_axe       diamond   axe
-diamond_shovel    diamond   shovel
-diamond_hoe       diamond   hoe
-iron_sword        iron      sword
-iron_pickaxe      iron      pickaxe
-iron_axe          iron      axe
-iron_shovel       iron      shovel
-iron_hoe          iron      hoe
-golden_sword      gold      sword
-golden_pickaxe    gold      pickaxe
-golden_axe        gold      axe
-golden_shovel     gold      shovel
-golden_hoe        gold      hoe
-stone_sword       stone     sword
-stone_pickaxe     stone     pickaxe
-stone_axe         stone     axe
-stone_shovel      stone     shovel
-stone_hoe         stone     hoe
-wooden_sword      wood      sword
-wooden_pickaxe    wood      pickaxe
-wooden_axe        wood      axe
-wooden_shovel     wood      shovel
-wooden_hoe        wood      hoe
+# item            # tier    # type   # model  # overrides
+bow               wood      bow      bow      _pulling_0 _pulling_1 _pulling_2
+crossbow          wood      crossbow crossbow _pulling_0 _pulling_1 _pulling_2 _arrow _firework
+
+netherite_sword   netherite sword    handheld
+netherite_pickaxe netherite pickaxe  handheld
+netherite_axe     netherite axe      handheld
+netherite_shovel  netherite shovel   handheld
+netherite_hoe     netherite hoe      handheld
+diamond_sword     diamond   sword    handheld
+diamond_pickaxe   diamond   pickaxe  handheld
+diamond_axe       diamond   axe      handheld
+diamond_shovel    diamond   shovel   handheld
+diamond_hoe       diamond   hoe      handheld
+iron_sword        iron      sword    handheld
+iron_pickaxe      iron      pickaxe  handheld
+iron_axe          iron      axe      handheld
+iron_shovel       iron      shovel   handheld
+iron_hoe          iron      hoe      handheld
+golden_sword      gold      sword    handheld
+golden_pickaxe    gold      pickaxe  handheld
+golden_axe        gold      axe      handheld
+golden_shovel     gold      shovel   handheld
+golden_hoe        gold      hoe      handheld
+stone_sword       stone     sword    handheld
+stone_pickaxe     stone     pickaxe  handheld
+stone_axe         stone     axe      handheld
+stone_shovel      stone     shovel   handheld
+stone_hoe         stone     hoe      handheld
+wooden_sword      wood      sword    handheld
+wooden_pickaxe    wood      pickaxe  handheld
+wooden_axe        wood      axe      handheld
+wooden_shovel     wood      shovel   handheld
+wooden_hoe        wood      hoe      handheld

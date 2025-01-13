@@ -1,5 +1,18 @@
-sword  	00 32	16 16
-pickaxe	16 32	16 16
-axe    	32 32	16 16
-shovel 	48 32	16 16
-hoe    	64 32	16 16
+#x y 	#w h 	# model 	# name
+00 00	16 16	bow     	bow
+16 00	16 16	bow     	bow_pulling_0
+32 00	16 16	bow     	bow_pulling_1
+48 00	16 16	bow     	bow_pulling_2
+
+00 16	16 16	crossbow	crossbow
+16 16	16 16	crossbow	crossbow_pulling_0
+32 16	16 16	crossbow	crossbow_pulling_1
+48 16	16 16	crossbow	crossbow_pulling_2
+64 16	16 16	crossbow	crossbow_arrow
+80 16	16 16	crossbow	crossbow_firework
+
+00 32	16 16	handheld	sword
+16 32	16 16	handheld	pickaxe
+32 32	16 16	handheld	axe
+48 32	16 16	handheld	shovel
+64 32	16 16	handheld	hoe

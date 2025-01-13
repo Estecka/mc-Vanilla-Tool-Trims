@@ -4,23 +4,16 @@ source sh/makeutil.sh
 IFS=''
 
 
-cat ingredients/tools.txt | while IFS=$'\t\n\r\v\f ' read -r tool_item tier tool_type;
-do for f in $TRIM_DIR/${tool_type}/*.png
-do if [ -f "$f" ]
-then
-	export tool_item tool_type tier pattern;
-	pattern=`basename $f`;
-	pattern=${pattern%.png}
+cat ingredients/tools.txt | while readwords tool_item tier tool_type model overrides;
+do cat ingredients/patterns.txt | while readwords pattern template;
+do cat ingredients/materials.txt | while IFS=$'\t\n\r\v\f ' read -r material material_item;
+do
+	export tool_item pattern template material material_item;
 
-	cat ingredients/materials.txt | while IFS=$'\t\n\r\v\f ' read -r material material_item;
-	do
-		export material material_item;
-
-		dst="data/minecraft/recipe/trimmed_${tool_item}/${pattern}_${material}.json"
-		if is_obsolete $dst "templates/recipe.json"
-		then envsubst_mkdir "templates/recipe.json" "$dst"
-		fi;
-	done;
-fi;
+	dst="data/minecraft/recipe/trimmed_${tool_item}/${pattern}_${material}.json"
+	if is_obsolete $dst "templates/recipe.json"
+	then envsubst_mkdir "templates/recipe.json" "$dst"
+	fi;
+done;
 done;
 done;

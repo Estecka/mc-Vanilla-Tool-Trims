@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eu -o pipefail
 IFS='';
-TEXDIR="assets/minecraft/textures/trims/items";
+source sh/makeutil.sh
 
 
 for sheet in spritesheets/*.png;
@@ -9,9 +9,9 @@ do
 	pattern=`basename $sheet`;
 	pattern=${pattern%.png};
 
-	cat "spritesheets/slices.txt" | while IFS=$'\t\n\r\v\f ' read name x y w h
+	cat "spritesheets/slices.txt" | while readwords x y w h parent name
 	do
-		dst=$TEXDIR/$name/$pattern.png;
+		dst=$TRIM_DIR/$name/$pattern.png;
 		if [[ $dst -ot $sheet ]]
 		then
 			echo >&2 $dst;

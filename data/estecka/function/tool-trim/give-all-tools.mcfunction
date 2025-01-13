@@ -1,5 +1,8 @@
 # Args: $(pattern) $(material)
 
+$give @s bow[               trim={pattern:$(pattern), material:$(material) }, item_model="trimmed_bow/$(pattern)" ]
+$give @s crossbow[          trim={pattern:$(pattern), material:$(material) }, item_model="trimmed_bow/$(pattern)" ]
+
 $give @s netherite_sword[   trim={pattern:$(pattern), material:$(material) }, item_model="trimmed_netherite_sword/$(pattern)" ]
 $give @s netherite_pickaxe[ trim={pattern:$(pattern), material:$(material) }, item_model="trimmed_netherite_pickaxe/$(pattern)" ]
 $give @s netherite_axe[     trim={pattern:$(pattern), material:$(material) }, item_model="trimmed_netherite_axe/$(pattern)" ]
