@@ -1,0 +1,29 @@
+{
+	"parent": "item/crossbow",
+	"textures": {
+		"layer0": "item/${tool_item}_standby",
+		"layer1": "trims/items/${tool_type}/${pattern}_${color}"
+	},
+	"overrides": [
+		{
+			"predicate": { "pulling": 1 },
+			"model": "item/trimmed_${tool_item}_pulling_0/${pattern}_${color}"
+		},
+		{
+			"predicate": { "pulling": 1, "pull": 0.58 },
+			"model": "item/trimmed_${tool_item}_pulling_1/${pattern}_${color}"
+		},
+		{
+			"predicate": { "pulling": 1, "pull": 1.0 },
+			"model": "item/trimmed_${tool_item}_pulling_2/${pattern}_${color}"
+		},
+		{
+			"predicate": { "charged": 1 },
+			"model": "item/trimmed_${tool_item}_arrow/${pattern}_${color}"
+		},
+		{
+			"predicate": { "charged": 1, "firework": 1 },
+			"model": "item/trimmed_${tool_item}_firework/${pattern}_${color}"
+		}
+	]
+}

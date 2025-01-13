@@ -4,17 +4,15 @@ source sh/makeutil.sh
 IFS=''
 
 
-for f in $TRIM_TEX
-do cat ingredients/palettes.txt | while IFS=$'\t\n\r\v\f ' read -r color palette;
+cat spritesheets/slices.txt | while readwords x y w h model_parent tool_type;
+do cat ingredients/patterns.txt | while readwords pattern template;
+do cat ingredients/palettes.txt | while readwords color palette;
 do
-	pattern=`basename $f`
-	pattern=${pattern%.png}
-	tool_type=$(basename `dirname $f`)
-
-	export tool_type pattern color
+	export model_parent tool_type pattern color
 	dst="assets/minecraft/models/trims/items/${tool_type}/${pattern}_${color}.json"
-	if is_obsolete $dst "templates/model_trim.json"
-	then envsubst_mkdir "templates/model_trim.json" "$dst"
+	if is_obsolete $dst "templates/baked_model/trim_only.json"
+	then envsubst_mkdir "templates/baked_model/trim_only.json" "$dst"
 	fi;
+done;
 done;
 done;

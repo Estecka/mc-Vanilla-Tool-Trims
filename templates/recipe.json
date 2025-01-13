@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:smithing_transform",
 	"base": "${tool_item}",
-	"template": "${pattern}_armor_trim_smithing_template",
+	"template": "${template}",
 	"addition": "${material_item}",
 	"result": {
 		"count": 1,
