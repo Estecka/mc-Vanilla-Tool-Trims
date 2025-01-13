@@ -1,0 +1,17 @@
+{
+	"model": {
+		"type": "minecraft:condition",
+		"property": "minecraft:using_item",
+		"on_false": ${composite},
+		"on_true": {
+			"type": "minecraft:range_dispatch",
+			"property": "minecraft:use_duration",
+			"scale": 0.05,
+			"fallback": ${composite_pulling_0},
+			"entries": [
+				{ "threshold": 0.65, "model": ${composite_pulling_1} },
+				{ "threshold": 0.90, "model": ${composite_pulling_2} }
+			]
+		}
+	}
+}

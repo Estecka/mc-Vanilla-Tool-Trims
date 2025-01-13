@@ -1,0 +1,7 @@
+{
+	"parent": "item/${tool_item}${override}",
+	"textures": {
+		"layer0": "item/${tool_item}${override}",
+		"layer1": "trims/items/${tool_type}${override}/${pattern}_${color}"
+	}
+}

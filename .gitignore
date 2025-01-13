@@ -4,6 +4,7 @@
 /pack-assets.mcmeta
 /pack-data.mcmeta
 
+templates/**/.*.json
 assets/*/textures/trims/items/*
 assets/**/*.json
 data/**/*.json
