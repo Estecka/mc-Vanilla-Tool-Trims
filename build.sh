@@ -8,10 +8,9 @@ echo >&2 -e "\n\t# Assets generation"
 sh/make-atlas.sh
 sh/make-trim-models.sh
 sh/make-item-states.sh
-sh/make-variants-cit.sh
 
 echo >&2 -e "\n\t# Data generation"
-sh/make-recipes.sh
+sh/make-tag.sh
 
 echo >&2 -e "\n\t# Minifying"
 sh/minify.sh >/dev/null

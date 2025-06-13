@@ -10,3 +10,7 @@ assets/**/*.json
 data/**/*.json
 
 *.zip
+
+# System files
+/desktop.ini
+/pack.ico

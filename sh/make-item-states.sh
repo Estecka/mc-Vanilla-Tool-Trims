@@ -13,23 +13,27 @@ function make_composite(){
 	then return 0;
 	fi;
 
+	echo >&2 "($dst)"
+
 	cp 'templates/model_selector/composite.json' $dst
 
 	cat ingredients/materials.txt | while readwords material material_item;
+	do cat ingredients/patterns.txt | while readwords pattern template;
 	do
-		export material material_item;
+		export pattern material material_item;
 
 		if [[ "$material" = "$tier" ]]
 		then export color="${material}_darker"
 		else export color="${material}"
 		fi;
 
-		local case=`envsubst '$color$material' <templates/model_selector/material_case.json | tr -d $'\r'`
+		local case=`envsubst '$pattern$color$material' <templates/model_selector/trim_case.json | tr -d $'\r'`
 		jq_append $dst ".models[1].cases" $case
+	done;
 	done;
 }
 
-function list_composites(){
+function list_composite_overrides(){
 	while read -r line
 	do if [[ $line =~ \$\{composite(_[a-z0-9_]+)?\} ]]
 	then
@@ -40,13 +44,12 @@ function list_composites(){
 
 
 cat ingredients/tools.txt | while readwords tool_item tier tool_type model overrides;
-do cat ingredients/patterns.txt | while readwords pattern template;
 do
-	export tool_item tool_type tier pattern;
+	export tool_item tool_type tier;
 
 	composite_template=`make_composite $tier`;
 	src="templates/item_state/$model.json"
-	dst="assets/minecraft/items/trimmed_$tool_item/$pattern.json"
+	dst="assets/minecraft/items/$tool_item.json"
 	if is_obsolete $dst $src $composite_template
 	then
 		while read -r suffix
@@ -55,9 +58,8 @@ do
 			export base_model="$tool_item$suffix";
 			export trim_model="$tool_type$suffix";
 			export $varname=`envsubst <$composite_template | tr -d $'\r'`
-		done < <(list_composites <$src);
+		done < <(list_composite_overrides <$src);
 
 		envsubst_mkdir $src $dst
 	fi;
-done;
 done;
