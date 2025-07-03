@@ -15,6 +15,9 @@ function pack_mcmeta(){
 
 }
 
+export PACK_VERSION;
+export MC_VERSION;
+
 export FORMAT_MAIN=$ASSETS_MAIN;
 export FORMAT_MIN=$ASSETS_MIN;
 export FORMAT_MAX=$ASSETS_MAX;
