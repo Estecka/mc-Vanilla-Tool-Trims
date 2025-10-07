@@ -2,12 +2,16 @@
 	"pack": {
 		"pack_format": ${FORMAT_MAIN},
 		"supported_formats": [${FORMAT_MIN}, ${FORMAT_MAX}],
+		"min_format": ${FORMAT_MIN},
+		"max_format": ${FORMAT_MAX},
 		"description": [
 			{ "color":"gray", "text":""},
-			{ "color":"aqua", "text":"v${PACK_VERSION}" }, { "color":"white", "text":" | "},
-			{ "color":"yellow", "text":"MC ${MC_VERSION}" }, { "color":"white", "text":" | "},
-			"by ", { "color":"gold", "text":"Estecka\n" },
-			"Vanilla trimmable tools\n"
+			{ "color":"aqua", "text":"v${PACK_VERSION}" },
+			{ "color":"white", "text":" for "},
+			{ "color":"yellow", "text":"MC ${MC_VERSION}" },
+			"\n",
+			"Trims by ", { "color":"gold", "text":"Estecka" },
+			""
 		]
 	}
 }
