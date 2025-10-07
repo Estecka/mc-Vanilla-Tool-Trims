@@ -22,6 +22,11 @@ golden_pickaxe    gold      pickaxe  handheld
 golden_axe        gold      axe      handheld
 golden_shovel     gold      shovel   handheld
 golden_hoe        gold      hoe      handheld
+copper_sword      copper    sword    handheld
+copper_pickaxe    copper    pickaxe  handheld
+copper_axe        copper    axe      handheld
+copper_shovel     copper    shovel   handheld
+copper_hoe        copper    hoe      handheld
 stone_sword       stone     sword    handheld
 stone_pickaxe     stone     pickaxe  handheld
 stone_axe         stone     axe      handheld

@@ -1,7 +1,6 @@
 {
 	"pack": {
 		"pack_format": ${FORMAT_MAIN},
-		"supported_formats": [${FORMAT_MIN}, ${FORMAT_MAX}],
 		"min_format": ${FORMAT_MIN},
 		"max_format": ${FORMAT_MAX},
 		"description": [
