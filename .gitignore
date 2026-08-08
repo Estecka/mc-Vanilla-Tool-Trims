@@ -10,6 +10,7 @@ assets/**/*.json
 data/**/*.json
 
 *.zip
+zia*
 
 # System files
 /desktop.ini

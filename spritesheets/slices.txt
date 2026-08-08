@@ -16,3 +16,5 @@
 32 32	16 16	handheld	axe
 48 32	16 16	handheld	shovel
 64 32	16 16	handheld	hoe
+80 32	16 16	handheld	spear
+64 48	32 32	spear_in_hand	spear_in_hand

@@ -10,3 +10,6 @@
 - Added bow and crossbow trims.
 ### 1.1.1
 - Updated for MC 1.21.7
+## 1.2
+- Added spear trims.
+- Made minor adjustments to existing trims

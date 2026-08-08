@@ -2,6 +2,14 @@
 bow               wood      bow      bow      _pulling_0 _pulling_1 _pulling_2
 crossbow          wood      crossbow crossbow _pulling_0 _pulling_1 _pulling_2 _arrow _firework
 
+wooden_spear      wood      spear    spear    _in_hand
+stone_spear       stone     spear    spear    _in_hand
+iron_spear        iron      spear    spear    _in_hand
+copper_spear      copper    spear    spear    _in_hand
+golden_spear      gold      spear    spear    _in_hand
+diamond_spear     diamond   spear    spear    _in_hand
+netherite_spear   netherite spear    spear    _in_hand
+
 netherite_sword   netherite sword    handheld
 netherite_pickaxe netherite pickaxe  handheld
 netherite_axe     netherite axe      handheld
