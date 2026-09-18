@@ -2,7 +2,7 @@
 	"sources": [
 		{
 			"type": "paletted_permutations",
-			"palette_key": "trims/color_palettes/trim_palette",
+			"palette_key": "trim_base",
 			"permutations": {
 			},
 			"textures": [
