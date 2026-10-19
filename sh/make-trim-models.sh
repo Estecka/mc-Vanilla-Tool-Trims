@@ -4,9 +4,11 @@ source sh/makeutil.sh
 IFS=''
 
 
-cat spritesheets/slices.txt | while readwords x y w h model_parent tool_type;
-do cat ingredients/patterns.txt | while readwords pattern template;
-do cat ingredients/palettes.txt | while readwords color palette;
+# Make baked models that include only the trims. Those can be combined with the
+# tool's orignal baked model using `composite` model selectors.
+cat config/sprites.txt | while readwords x y w h model_parent tool_type;
+do cat config/patterns.txt | while readwords pattern template;
+do cat config/palettes.txt | while readwords color palette;
 do
 	export model_parent tool_type pattern color
 	dst="assets/minecraft/models/trims/items/${tool_type}/${pattern}_${color}.json"

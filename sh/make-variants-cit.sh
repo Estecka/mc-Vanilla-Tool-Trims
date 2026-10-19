@@ -4,12 +4,12 @@ IFS=''
 source sh/makeutil.sh
 
 
-cat ingredients/tools.txt | while readwords tool_item tier tool_type model overrides;
+cat config/tools.txt | while readwords tool_item tier tool_type model overrides;
 do
 	export tool_item;
 
 	dst="assets/estecka/variants-cit/item/trimmed_${tool_item}.json"
-	if is_obsolete $dst "templates/variants-cit.json" "ingredients/tools.txt"
+	if is_obsolete $dst "templates/variants-cit.json" "config/tools.txt"
 	then
 		envsubst_mkdir "templates/variants-cit.json" $dst
 	fi;
