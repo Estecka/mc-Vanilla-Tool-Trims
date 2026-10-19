@@ -9,7 +9,7 @@ do
 	pattern=`basename $sheet`;
 	pattern=${pattern%.png};
 
-	cat "spritesheets/slices.txt" | while readwords x y w h parent name
+	cat "config/sprites.txt" | while readwords x y w h parent name
 	do
 		dst=$TRIM_DIR/$name/$pattern.png;
 		if [[ $dst -ot $sheet ]]

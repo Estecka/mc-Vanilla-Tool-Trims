@@ -15,7 +15,7 @@ jobs:
       - name: Make executable
         run: chmod +x ./*.sh sh/*.sh
       - name: Build
-        run: ./build.sh
+        run: ./build.sh --minify
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:

@@ -2,13 +2,13 @@
 set -eu -o pipefail
 IFS=''
 
-source ingredients/pack_format.sh
+source config/pack_format.sh
 source sh/makeutil.sh
 
 function pack_mcmeta(){
 	dst=$1;
 
-	if is_obsolete $dst 'templates/pack.mcmeta' 'ingredients/pack_format.sh'
+	if is_obsolete $dst 'templates/pack.mcmeta' 'config/pack_format.sh'
 	then
 		envsubst <templates/pack.mcmeta >$dst
 	fi;
