@@ -17,8 +17,8 @@ function make_composite(){
 
 	cp 'templates/model_selector/composite.json' $dst
 
-	cat ingredients/materials.txt | while readwords material material_item;
-	do cat ingredients/patterns.txt | while readwords pattern template;
+	cat config/materials.txt | while readwords material material_item;
+	do cat config/patterns.txt | while readwords pattern template;
 	do
 		export pattern material material_item;
 
@@ -43,7 +43,7 @@ function list_composite_overrides(){
 }
 
 
-cat ingredients/tools.txt | while readwords tool_item tier tool_type model overrides;
+cat config/tools.txt | while readwords tool_item tier tool_type model overrides;
 do
 	export tool_item tool_type tier;
 

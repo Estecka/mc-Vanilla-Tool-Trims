@@ -2,14 +2,14 @@
 set -eu -o pipefail
 IFS=''
 source sh/makeutil.sh
-ATLAS="assets/minecraft/atlases/blocks.json"
+ATLAS="assets/minecraft/atlases/items.json"
 
 
-if is_obsolete $ATLAS "templates/atlas.json" "ingredients/palettes.txt" $TRIM_TEX
+if is_obsolete $ATLAS "templates/atlas.json" "config/palettes.txt" $TRIM_TEX
 then
 	envsubst_mkdir "templates/atlas.json" $ATLAS
 
-	cat ingredients/palettes.txt | while IFS=$'\t\n\r\v\f ' read -r color palette;
+	cat config/palettes.txt | while IFS=$'\t\n\r\v\f ' read -r color palette;
 	do
 		jq_append $ATLAS ".sources[0].permutations" '{"'$color'": "'$palette'"}'
 	done;

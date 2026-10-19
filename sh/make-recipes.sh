@@ -4,9 +4,9 @@ source sh/makeutil.sh
 IFS=''
 
 
-cat ingredients/tools.txt | while readwords tool_item tier tool_type model overrides;
-do cat ingredients/patterns.txt | while readwords pattern template;
-do cat ingredients/materials.txt | while IFS=$'\t\n\r\v\f ' read -r material material_item;
+cat config/tools.txt | while readwords tool_item tier tool_type model overrides;
+do cat config/patterns.txt | while readwords pattern template;
+do cat config/materials.txt | while IFS=$'\t\n\r\v\f ' read -r material material_item;
 do
 	export tool_item pattern template material material_item;
 
