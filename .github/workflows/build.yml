@@ -8,8 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     steps:
-      - name: Setup FFmpeg
-        uses: federicocarboni/setup-ffmpeg@v3
+      - name: Setup FFmpeg action
+        uses: AnimMouse/setup-ffmpeg@v1.2.5
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Make executable
