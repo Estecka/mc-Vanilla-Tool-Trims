@@ -4,9 +4,14 @@ source sh/makeutil.sh
 IFS=''
 
 
-cat ingredients/tools.txt | while readwords tool_item tier tool_type model override_list;
-do cat ingredients/patterns.txt | while readwords pattern template;
-do cat ingredients/materials.txt | while readwords material material_item;
+# Make baked models that include both the tool's original texture and the trim's
+# texture. Usable on versions  where `composite` model selectors are unavailable
+# or don't work properly.
+# NOTE: Obsolete. Only used  in older  versions  of the pack, and won't  work on
+# spears as is.
+cat config/tools.txt | while readwords tool_item tier tool_type model override_list;
+do cat config/patterns.txt | while readwords pattern template;
+do cat config/materials.txt | while readwords material material_item;
 do
 	export tool_item tool_type tier;
 	export pattern template;

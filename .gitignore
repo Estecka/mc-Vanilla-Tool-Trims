@@ -10,6 +10,10 @@ assets/**/*.json
 data/**/*.json
 
 *.zip
+zia*
+
+# Hardcoded files
+!assets/estecka/models/display/**
 
 # System files
 /desktop.ini

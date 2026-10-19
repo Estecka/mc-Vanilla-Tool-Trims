@@ -1,0 +1,21 @@
+# tool  	# override	# display	# texture_override
+crossbow	--        	crossbow	_standby
+crossbow	_pulling_1	crossbow
+crossbow	_pulling_2	crossbow
+crossbow	_pulling_0	crossbow
+crossbow	_arrow    	crossbow
+crossbow	_firework 	crossbow
+
+bow     	--        	bow
+bow     	_pulling_1	bow
+bow     	_pulling_2	bow
+bow     	_pulling_0	bow
+
+spear   	--        	generated-x32
+spear   	_in_hand  	spear_in_hand
+
+axe     	--        	handheld
+pickaxe 	--        	handheld
+hoe     	--        	handheld
+shovel  	--        	handheld
+sword   	--        	handheld
