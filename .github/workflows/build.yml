@@ -8,16 +8,16 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     steps:
-      - name: Setup FFmpeg
-        uses: federicocarboni/setup-ffmpeg@v3
+      - name: Setup FFmpeg action
+        uses: AnimMouse/setup-ffmpeg@v1.2.5
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Make executable
         run: chmod +x ./*.sh sh/*.sh
       - name: Build
         run: ./build.sh --minify
       - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: Artifacts
           path: ./*.zip
