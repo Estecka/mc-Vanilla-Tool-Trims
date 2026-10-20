@@ -11,7 +11,7 @@ bow     	_pulling_1	bow
 bow     	_pulling_2	bow
 bow     	_pulling_0	bow
 
-spear   	--        	generated-x32
+spear   	--        	handheld
 spear   	_in_hand  	spear_in_hand
 
 axe     	--        	handheld
