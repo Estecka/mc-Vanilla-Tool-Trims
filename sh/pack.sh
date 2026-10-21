@@ -5,6 +5,8 @@ IFS=''
 allpack="STK-ToolTrim.zip";
 texturepack="STK-ToolTrim-assets.zip";
 datapack="STK-ToolTrim-data.zip";
+TEXTUREPACK_DIR=""
+DATAPACK_DIR=""
 
 sh/make-pack-mcmeta.sh
 rm -f $allpack $texturepack $datapack;
@@ -38,3 +40,10 @@ zip "$allpack" -r -9 >/dev/null \
 	pack.mcmeta \
 	pack.png \
 	;
+
+if [ ! -z "$TEXTUREPACK_DIR" ] && [ ! -z "$DATAPACK_DIR" ]
+then
+	echo >&2 -e "Deploying..."
+	cp -v "$texturepack" "$TEXTUREPACK_DIR/$texturepack"
+	cp -v "$datapack"    "$DATAPACK_DIR/$datapack"
+fi;

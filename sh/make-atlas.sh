@@ -2,7 +2,7 @@
 set -eu -o pipefail
 IFS=''
 source sh/makeutil.sh
-ATLAS="assets/minecraft/atlases/blocks.json"
+ATLAS="assets/minecraft/atlases/items.json"
 
 
 if is_obsolete $ATLAS "templates/atlas.json" "ingredients/palettes.txt" $TRIM_TEX
