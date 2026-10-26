@@ -15,6 +15,7 @@ echo >&2 "Packing assets..."
 cp pack-assets.mcmeta pack.mcmeta
 zip "$texturepack" -r -9 >/dev/null \
 	assets/ \
+	overlay_*/assets \
 	LICENSE \
 	pack.mcmeta \
 	pack.png \
@@ -33,6 +34,7 @@ echo >&2 "Packing all-in-one..."
 cp pack-all.mcmeta pack.mcmeta
 zip "$allpack" -r -9 >/dev/null \
 	assets/ \
+	overlay_*/assets \
 	data/ \
 	LICENSE \
 	pack-assets.mcmeta \
