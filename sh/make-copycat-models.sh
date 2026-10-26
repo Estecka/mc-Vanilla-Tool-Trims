@@ -18,7 +18,7 @@ then
 	then texture_suffix=$override
 	fi;
 
-	export tool_item model_parent texture_suffix;
+	export tool_item override model_parent texture_suffix;
 
 	dst="assets/estecka/models/copycat/${tool_item}${override}.json"
 	if is_obsolete $dst "templates/baked_model/copycat.json" "config/models.txt"
