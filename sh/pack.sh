@@ -30,22 +30,22 @@ zip "$datapack" -r -9 >/dev/null \
 	pack.png \
 	;
 
-echo >&2 "Packing all-in-one..."
-cp pack-all.mcmeta pack.mcmeta
-zip "$allpack" -r -9 >/dev/null \
-	assets/ \
-	overlay_*/assets \
-	data/ \
-	LICENSE \
-	pack-assets.mcmeta \
-	pack-data.mcmeta \
-	pack.mcmeta \
-	pack.png \
-	;
+# echo >&2 "Packing all-in-one..."
+# cp pack-all.mcmeta pack.mcmeta
+# zip "$allpack" -r -9 >/dev/null \
+# 	assets/ \
+# 	overlay_*/assets \
+# 	data/ \
+# 	LICENSE \
+# 	pack-assets.mcmeta \
+# 	pack-data.mcmeta \
+# 	pack.mcmeta \
+# 	pack.png \
+# 	;
 
-if [ ! -z "$TEXTUREPACK_DIR" ] && [ ! -z "$DATAPACK_DIR" ]
+if [ ! -z "$TEXTUREPACK_DIR" ] || [ ! -z "$DATAPACK_DIR" ]
 then
 	echo >&2 -e "\n\t# Deploying"
-	cp -v "$texturepack" "$TEXTUREPACK_DIR/$texturepack"
-	cp -v "$datapack"    "$DATAPACK_DIR/$datapack"
+	[ ! -z "$TEXTUREPACK_DIR" ] && cp -v "$texturepack" "$TEXTUREPACK_DIR/$texturepack"
+	[ ! -z "$DATAPACK_DIR"    ] && cp -v "$datapack"    "$DATAPACK_DIR/$datapack"
 fi;
