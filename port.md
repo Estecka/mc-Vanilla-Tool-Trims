@@ -13,7 +13,7 @@
 - Armor-item trims were moved from the `blocks` to the `items` atlas.
 
 ### 26.1
-- Composite models aren't ordered properly if they mix textures from the `blocks` and `items` atlases.
+- Composite models aren't ordered properly if they mix textures from `blocks` and `items`.
   Tool trims **must** be moved to the `items` atlas
 
 ### 26.2

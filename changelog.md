@@ -11,8 +11,7 @@
 ### 1.1.1
 - Updated for MC 1.21.7
 ## 1.2
-### 1.2.0
 - Added spear trims. (MC 1.21.11)
 - Made minor adjustments to existing trims
-### 1.2.1
-- Fixed rendering in MC 26.1
+## 1.3
+- Added custom `generated` models to fix z-fighting

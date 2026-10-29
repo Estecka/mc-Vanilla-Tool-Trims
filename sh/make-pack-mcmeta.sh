@@ -2,15 +2,17 @@
 set -eu -o pipefail
 IFS=''
 
-source ingredients/pack_format.sh
+source config/pack_format.sh
 source sh/makeutil.sh
 
 function pack_mcmeta(){
+	src=templates/mcmeta/$1;
 	dst=$1;
 
-	if is_obsolete $dst 'templates/pack.mcmeta' 'ingredients/pack_format.sh'
+	export DESCRIPTION=`envsubst <templates/mcmeta/pack_description.json`
+	if is_obsolete $dst $src 'config/pack_format.sh'
 	then
-		envsubst <templates/pack.mcmeta >$dst
+		envsubst <$src >$dst
 	fi;
 
 }
@@ -28,7 +30,7 @@ export FORMAT_MIN=$DATA_MIN;
 export FORMAT_MAX=$DATA_MAX;
 pack_mcmeta pack-data.mcmeta
 
-export FORMAT_MAIN=$(($DATA_MAIN>$ASSETS_MAIN ? $DATA_MAIN : $ASSETS_MAIN));
-export FORMAT_MIN=$(($DATA_MIN<$ASSETS_MIN ? $DATA_MIN : $ASSETS_MIN));
-export FORMAT_MAX=$(($DATA_MAX>$ASSETS_MAX ? $DATA_MAX : $ASSETS_MAX));
-pack_mcmeta pack-all.mcmeta
+# export FORMAT_MAIN=$(($DATA_MAIN>$ASSETS_MAIN ? $DATA_MAIN : $ASSETS_MAIN));
+# export FORMAT_MIN=$(($DATA_MIN<$ASSETS_MIN ? $DATA_MIN : $ASSETS_MIN));
+# export FORMAT_MAX=$(($DATA_MAX>$ASSETS_MAX ? $DATA_MAX : $ASSETS_MAX));
+# pack_mcmeta pack-all.mcmeta
