@@ -1,0 +1,8 @@
+{
+	"pack": {
+		"pack_format": ${FORMAT_MAIN},
+		"min_format": ${FORMAT_MIN},
+		"max_format": ${FORMAT_MAX},
+		"description": ${DESCRIPTION}
+	}
+}
