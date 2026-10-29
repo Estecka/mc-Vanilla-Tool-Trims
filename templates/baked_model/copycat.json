@@ -1,0 +1,6 @@
+{
+	"parent": "estecka:display/${model_parent}",
+	"textures": {
+		"layer0": "item/${tool_item}${texture_suffix}"
+	}
+}

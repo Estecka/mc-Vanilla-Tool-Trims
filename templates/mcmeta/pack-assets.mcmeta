@@ -1,0 +1,36 @@
+{
+	"pack": {
+		"pack_format": ${FORMAT_MAIN},
+		"min_format": ${FORMAT_MIN},
+		"max_format": ${FORMAT_MAX},
+		"description": ${DESCRIPTION}
+	},
+	"overlays": {
+		"entries": [
+			{
+				"directory": "overlay_26.3",
+				"formats": [ 97, 97 ],
+				"max_format": 97,
+				"min_format": 97
+			},
+			{
+				"directory": "overlay_1.21.9-26.2",
+				"formats": [ 69, 88 ],
+				"max_format": 88,
+				"min_format": 69
+			},
+			{
+				"directory": "overlay_1.21.6-1.21.8",
+				"formats": [ 63, 64 ],
+				"max_format": 64,
+				"min_format": 63
+			},
+			{
+				"directory": "overlay_1.21.5",
+				"formats": [ 55, 55 ],
+				"max_format": 55,
+				"min_format": 55
+			}
+		]
+	}
+}
