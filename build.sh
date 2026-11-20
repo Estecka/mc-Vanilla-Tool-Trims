@@ -1,5 +1,6 @@
 #!/bin/bash
 set -eu -o pipefail
+export TERM=${TERM:-dumb}
 
 echo >&2 -e "\n\t# Texture generation"
 sh/make-textures.sh

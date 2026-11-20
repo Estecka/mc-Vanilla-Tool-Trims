@@ -8,14 +8,14 @@ Run `build.sh` to run all build steps.
 ## Configurations
 ### config/sprites.txt
 The list of trim sprites for each pattern. Each line formatted as:  
-`<x> <y> <width> <height> <model> <tool_type>`
+`<x> <y> <width> <height> <name>`
 
 Instead of individual item textures, the sources contains a spritesheet for each trim pattern, only because it is more convenient for painting. Individual textures are sliced from that sheet during build.
 
 - `x`, `y`: The position of the slice on the sheet.
 - `width`, `height`: The dimensions of the slice.
 - `model`: The parent that will be used for the corresponding baked model.
-- `tool_type`: The family of tools the texture applies to, including the submodel suffix if applicable. (E.g: `spear_in_hand`)
+- `names`: The family of tools the texture applies to, including the submodel suffix if applicable. (E.g: `spear_in_hand`)
 
 ### config/patterns.txt
 The list of possible trim patterns, each line formatted as:  
@@ -40,14 +40,15 @@ Unlike the materials list, the palette list include `_darker` colors of some mat
 
 ### config/models.txt
 The list of models available to each family of tools. Each line formatted as:  
-`<tool_type> <override>	<model_parent> [<texture_override>]`
+`<tool_type> <override>	<model_parent> <tool_texture> <trim_override>`
 
-This is used to generate copies of the vanilla models, with z-fighting fixed.
+This is used to generate copies of the vanilla models (with z-fighting fixed), and trim-only models
 
 - `tool_type`: The family of tools this submodel applies to. (E.g: `sword`)
 - `override`: The suffix of one submodel for the tool (e.g: `_in_hand`), or `--` for the base model.
 - `model_parent`: The parent to use for this submodel (e.g: `handheld`). This refers to `estecka:display/<model_parent>` rather than the vanilla models.
-- `texture_override`: The suffix of the texture used in this submodel, if different from `<override>`.
+- `tool_texture`: The format for the tool's texture.
+- `trim_override`: The suffix to use for the trim texture
 
 
 ### config/tools.txt

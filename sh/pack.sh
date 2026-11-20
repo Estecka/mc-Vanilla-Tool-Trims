@@ -10,6 +10,7 @@ DATAPACK_DIR=""
 
 sh/make-pack-mcmeta.sh
 rm -f $allpack $texturepack $datapack;
+tput >&2 el || :
 
 echo >&2 "Packing assets..."
 cp pack-assets.mcmeta pack.mcmeta

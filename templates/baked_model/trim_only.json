@@ -1,6 +1,6 @@
 {
 	"parent": "estecka:display/${model_parent}",
 	"textures": {
-		"layer0": "trims/items/${tool_type}/${pattern}_${color}"
+		"layer0": "trims/items/${tool_type}${override}/${pattern}_${color}"
 	}
 }
