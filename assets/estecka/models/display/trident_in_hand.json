@@ -1,0 +1,25 @@
+{
+	"parent": "estecka:display/generated-trident",
+	"textures": {
+		"particle": "#layer0",
+		"layer0": "entity/trident"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 60, 0],
+			"translation": [0.5, -10, 1]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 60, 0],
+			"translation": [0.5, -10, 1]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -90, 25],
+			"translation": [1, -10, 8]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -90, 25],
+			"translation": [1, -10, 8]
+		}
+	}
+}

@@ -25,6 +25,10 @@ function is_obsolete(){
 	fi;
 	done;
 
+	tput >&2 sc || :
+	tput >&2 el || :
+	echo >&2 " ... $target"
+	tput >&2 rc || :
 	return 1;
 }
 
@@ -32,6 +36,7 @@ function envsubst_mkdir(){
 	local src="$1";
 	local dst="$2";
 
+	tput >&2 el || :
 	echo >&1 "$dst";
 	mkdir -p `dirname "$dst"`
 	envsubst <"$src" >"$dst";

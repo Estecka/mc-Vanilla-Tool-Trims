@@ -15,3 +15,5 @@
 - Made minor adjustments to existing trims
 ## 1.3
 - Added custom `generated` models to fix z-fighting
+## 1.4
+- Added spear-like trident trims

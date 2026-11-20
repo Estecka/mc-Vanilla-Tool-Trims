@@ -1,21 +1,22 @@
-# tool  	# override	# display	# texture_override
-crossbow	--        	crossbow	_standby
-crossbow	_pulling_1	crossbow
-crossbow	_pulling_2	crossbow
-crossbow	_pulling_0	crossbow
-crossbow	_arrow    	crossbow
-crossbow	_firework 	crossbow
+# tool  	# override	# display    	# tool texture              	# trim override
+axe     	--        	handheld     	item/${tool_item}${override}	${override}
+pickaxe 	--        	handheld     	item/${tool_item}${override}	${override}
+hoe     	--        	handheld     	item/${tool_item}${override}	${override}
+shovel  	--        	handheld     	item/${tool_item}${override}	${override}
+sword   	--        	handheld     	item/${tool_item}${override}	${override}
 
-bow     	--        	bow
-bow     	_pulling_1	bow
-bow     	_pulling_2	bow
-bow     	_pulling_0	bow
+crossbow	--        	crossbow     	item/${tool_item}_standby   	${override}
+crossbow	_pulling_1	crossbow     	item/${tool_item}${override}	${override}
+crossbow	_pulling_2	crossbow     	item/${tool_item}${override}	${override}
+crossbow	_pulling_0	crossbow     	item/${tool_item}${override}	${override}
+crossbow	_arrow    	crossbow     	item/${tool_item}${override}	${override}
+crossbow	_firework 	crossbow     	item/${tool_item}${override}	${override}
 
-spear   	--        	handheld
-spear   	_in_hand  	spear_in_hand
+bow     	--        	bow          	item/${tool_item}${override}	${override}
+bow     	_pulling_1	bow          	item/${tool_item}${override}	${override}
+bow     	_pulling_2	bow          	item/${tool_item}${override}	${override}
+bow     	_pulling_0	bow          	item/${tool_item}${override}	${override}
 
-axe     	--        	handheld
-pickaxe 	--        	handheld
-hoe     	--        	handheld
-shovel  	--        	handheld
-sword   	--        	handheld
+trident 	--        	handheld      	item/${tool_item}           	${override}
+trident 	_in_hand  	spear_in_hand 	item/${tool_item}_in_hand   	${override}
+trident 	_throwing  	spear_throwing	item/${tool_item}_in_hand   	_in_hand
