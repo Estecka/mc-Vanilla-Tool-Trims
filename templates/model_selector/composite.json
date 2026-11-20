@@ -2,11 +2,8 @@
 	"type": "composite",
 	"models": [
 		{
-			"type": "condition",
-			"property": "has_component",
-			"component": "trim",
-			"on_false": { "type":"model", "model":"minecraft:item/${base_model}"  },
-			"on_true":  { "type":"model", "model":"estecka:copycat/${base_model}" }
+			"type":"model",
+			"model": "estecka:copycat/${base_model}"
 		},
 		{
 			"type": "select",

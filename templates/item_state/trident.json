@@ -1,0 +1,18 @@
+{
+	"model": {
+		"type": "select",
+		"property": "display_context",
+		"cases": 
+		[{
+			"when": [ "gui", "ground", "fixed" ],
+			"model": ${composite}
+		}],
+		"fallback":
+		{
+			"type": "condition",
+			"property": "using_item",
+			"on_false": ${composite_in_hand},
+			"on_true":  ${composite_throwing}
+		}
+	}
+}

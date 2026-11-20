@@ -9,7 +9,7 @@ if is_obsolete $ATLAS "templates/atlas.json" "config/palettes.txt" $TRIM_TEX
 then
 	envsubst_mkdir "templates/atlas.json" $ATLAS
 
-	cat config/palettes.txt | while IFS=$'\t\n\r\v\f ' read -r color palette;
+	cat config/palettes.txt | while readwords color palette;
 	do
 		jq_append $ATLAS ".sources[0].permutations" '{"'$color'": "'$palette'"}'
 	done;
