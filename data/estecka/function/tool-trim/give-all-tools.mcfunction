@@ -2,6 +2,8 @@
 
 $give @s bow[               trim={pattern:$(pattern), material:$(material) }  ]
 $give @s crossbow[          trim={pattern:$(pattern), material:$(material) }  ]
+$give @s trident[           trim={pattern:$(pattern), material:$(material) }  ]
+$give @s mace[              trim={pattern:$(pattern), material:$(material) }  ]
 
 $give @s netherite_sword[   trim={pattern:$(pattern), material:$(material) }  ]
 $give @s netherite_pickaxe[ trim={pattern:$(pattern), material:$(material) }  ]

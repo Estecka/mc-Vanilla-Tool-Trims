@@ -1,6 +1,7 @@
-# item            # tier    # type   # model  # overrides
-bow               wood      bow      bow      _pulling_0 _pulling_1 _pulling_2
-crossbow          wood      crossbow crossbow _pulling_0 _pulling_1 _pulling_2 _arrow _firework
+# item            # tier    # type   # states
+bow               untiered  bow      bow
+crossbow          untiered  crossbow crossbow
+trident           untiered  trident  trident
 
 netherite_sword   netherite sword    handheld
 netherite_pickaxe netherite pickaxe  handheld
@@ -32,8 +33,8 @@ stone_pickaxe     stone     pickaxe  handheld
 stone_axe         stone     axe      handheld
 stone_shovel      stone     shovel   handheld
 stone_hoe         stone     hoe      handheld
-wooden_sword      wood      sword    handheld
-wooden_pickaxe    wood      pickaxe  handheld
-wooden_axe        wood      axe      handheld
-wooden_shovel     wood      shovel   handheld
-wooden_hoe        wood      hoe      handheld
+wooden_sword      untiered  sword    handheld
+wooden_pickaxe    untiered  pickaxe  handheld
+wooden_axe        untiered  axe      handheld
+wooden_shovel     untiered  shovel   handheld
+wooden_hoe        untiered  hoe      handheld
